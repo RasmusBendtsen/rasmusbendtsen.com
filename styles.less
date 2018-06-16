@@ -1,0 +1,689 @@
+//BASIC STYLING FOR ALL DEVICES:
+//Color scheme: NOTE: Only set the medium color! The entire scheme will adapt the that color.
+@ultraLight: lighten(@medium,
+35); //
+@light: lighten(@medium,
+15);
+@medium: #FFFFFF; //#C8BEBA;90A4AE#548c54
+@dark: darken(@medium,
+15);
+@ultraDark: darken(@medium,
+35);
+//ColorScheme:
+@darkblue: rgba(43,
+43,
+43,
+0.56); //#4e5a6a;
+@maxWidth: 1000px; // Max width of centered homepage area.
+@contentPadding: 10px;
+@contentPaddingM10: (@contentPadding - 10);
+@generalPadding_4: 4px;
+@generalPadding_8: 8px;
+@generalPadding_12: 12px;
+@generalPadding_16: 16px;
+//Body-element styling
+@viewport {
+    width: device-width;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 200;
+    //background-image: url("/IMG_0767.JPG");
+}
+
+input[type="search"] {
+    border: none;
+    padding: 5px;
+    background-color: rgb(91, 103, 115);
+    z-index: 200;
+}
+
+a {
+    color: #FBEEBA;
+}
+
+a:hover,
+a:focus {
+    color: #F5EECE;
+}
+
+.app {
+    //background-color: @dark; //@dark;
+    padding: @generalPadding_8;
+    font-size: 1.3em;
+    color: @ultraDark;
+    align-content: center;
+    max-width: @maxWidth;
+    margin-left: auto;
+    margin-right: auto;
+    //border: 12px solid @light
+    min-height: 1000px;
+}
+/*Container in App*/
+
+.content {
+    background-color: @ultraLight;
+    //padding: @generalPadding_8;
+    height: 100%;
+}
+
+div {
+    //background-color: @medium;
+    border-radius: 0px;
+}
+
+.siteBGImage {
+    position: fixed;
+    height: 123%;
+    top: -90px;
+    z-index: 0;
+    ///* -webkit-filter: blur(2px); */
+    width: 1200px;
+    right: 0px;
+    min-width: 100%;
+}
+
+.headerDiv {
+    z-index: 100;
+    position: relative;
+    background-color: transparent;
+    margin-bottom: 60px;
+    margin-top: 40px;
+}
+
+//Directive-specific styling
+.directive {
+    background-color: @dark;
+    //padding: 12px;
+    font-size: 1.3em;
+    color: @ultraDark;
+    height: 200px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.mainContent {
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: auto;
+    top: -800px; //-832px;
+    position: relative;
+    padding: 16px;
+    padding-bottom: 120px;
+}
+
+//................................................................
+//.
+//. FOOTER
+//................................................................
+.footerDiv {
+    width: 100%;
+    height: 40px;
+    background-color: rgba(41, 41, 41, 1);
+    color: #918F94;
+    position: fixed;
+    bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 400;
+    transition: .2s;
+    padding: 4px;
+    right: 0px;
+}
+
+.footerDiv:hover {
+    height: 210px;
+    background-color: #313131;
+    opacity: .98;
+}
+
+.contactHeader {
+    margin-bottom: 8px;
+    border-bottom: 0px solid #808080;
+    padding-bottom: 8px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-top: 4px;
+}
+
+.contactColumn {
+    //width: 25%;
+    //float: left;
+    //height: 268px;
+    float: left;
+    height: 268px;
+    padding-left: 2%;
+    padding-right: 8%;
+    display: inline-table;
+}
+
+.leftSeperatioLine {
+    border-left: 1px solid #808080;
+    padding-left: 12px;
+    margin-left: 12px;
+}
+
+.footerPicture {
+    max-width: 200px;
+    margin: 0.6%;
+    float: right;
+}
+
+.footerContent {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+}
+
+//................................................................
+//.
+//. TILES
+//................................................................
+.tileDiv {
+    float: left;
+    width: 32%;
+    margin: 0.6%;
+    //    width: 31%;
+    //    margin: 1.1%;
+    height: 240px;
+    background-color: transparent;
+    //border: 1px solid @ultraLight;
+    //margin: 12px;
+    //box-shadow: 0px 0px 1px yellow; //none|h-shadow v-shadow blur spread color 
+    transition: .3s;
+    //position: relative;
+    border-radius: 0px;
+    //padding: @generalPadding_8;
+}
+
+.tileExpanded {
+    width: 100% !important; //(@maxWidth - @generalPadding_8 - @generalPadding_8);
+    height: 100%;
+    //position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 200;
+    border-radius: 0px;
+    padding: 0;
+    top: 44px;
+    cursor: auto;
+    border-radius: 0px;
+    color: #272727;
+}
+
+.tileActive {
+    background-color: transparent;
+    //display: none;
+    top: 3000px;
+    transition: 0.6s;
+}
+
+.hideAllOtherTiles {
+    transition: .6s;
+    height: 0 !important;
+    width: 0 !important;
+    opacity: 0;
+    margin: 0px;
+    padding: 0px;
+}
+
+.tileHeaderImageContainer {
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    transition: .3s;
+    top: -800px;
+    position: relative;
+    overflow: hidden;
+    min-height: inherit;
+    min-width: inherit;
+}
+
+//.tileHeaderImageContainer:hover {
+//    opacity: 1;
+//}
+.tileHeaderImage {
+    width: 100%;
+    min-width: 100%;
+    position: relative;
+    left: 50%;
+    //bottom: 0px;
+    top: 125px;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    transition: 0.2s;
+    opacity: 1;
+    min-height: 230px;
+    max-width: initial;
+    -webkit-filter: saturate(80%);
+}
+
+// hover applies when tile is active.
+.tileHeaderImage:hover {
+    opacity: 1;
+}
+
+//when tile is active - image styles:
+.tileHeaderImageActive {
+    opacity: 1;
+    max-height: initial;
+    -webkit-filter: grayscale(0%);
+    top: 328px;
+}
+
+.tileHeaderImageActive:hover {
+    //opacity: 1;
+    //height: 100%;
+}
+
+.TileDescriptionOverlay:hover {
+    //top: 338px; //316
+    opacity: 1;
+    //background-color: #FFF;
+    //color: #FFF7F2; //#F4E0C7
+    //padding: 8px;
+}
+
+.TileDescriptionOverlay {
+    background-color: rgba(43, 43, 43, 0.8);
+    position: relative;
+    height: 433px;
+    width: 100%;
+    top: 482px;
+    z-index: 200;
+    transition: 0.2s;
+    padding: 6px;
+    padding-top: 0px;
+    opacity: .9;
+}
+
+.TileDescriptionOverlayContainer {
+    height: 800px;
+    width: 100%;
+    top: -338px;
+    z-index: 290;
+    position: relative;
+    transition: 0.2s;
+    overflow: hidden;
+    background-color: transparent;
+    //background-color: rgba(0, 0, 0, .1);
+    font-weight: 300;
+}
+
+.TileDescriptionOverlayContainer:hover {
+    //top: -229px;
+    top: -482px; //316
+    opacity: 1;
+    //background-color: #CAB79F;
+}
+
+.TileDescriptionOverlayContainer:hover ~ .tileHeaderImageContainer {
+    opacity: 1;
+    height: 400px
+}
+
+//applies tile-image changes on hover over tile
+.TileDescriptionOverlayContainer:hover ~ .tileHeaderImageContainer > .tileHeaderImage {
+    opacity: 1;
+    //max-height: 500px;
+    //min-height: 400px;
+    //min-width: 400px;
+    //max-height: none;
+    //max-width: none;
+    -webkit-filter: blur(6px) saturate(60%);
+    //height: 400px;
+}
+
+.tileDescriptionTitle {
+    display: inherit;
+}
+
+.TileDescriptionOverlayContainer:hover > .TileDescriptionOverlay {
+    //background-color: transparent;
+}
+
+.TileDescriptionOverlayContainer:hover > .TileDescriptionOverlay > .tileDescriptionTitle {
+    display: none;
+}
+
+.tileDescriptionTeaser {
+    display: none;
+}
+
+.TileDescriptionOverlayContainer:hover > .TileDescriptionOverlay > .tileDescriptionTeaser {
+    display: inherit;
+}
+
+.tileActive > .TileDescriptionOverlay {
+    display: none;
+}
+
+.tileActive:hover > .TileDescriptionOverlay {
+    display: none;
+}
+
+.tileExpanded > .tileActive,
+TileDescriptionOverlayContainer {
+    background-color: rgba(0, 0, 0, 0) !important;
+    top: 3000px !important;
+    transition: 0.6s !important;
+}
+
+.closeTile {
+    background-color: none;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.4);
+    padding-top: 13px;
+    float: right;
+    cursor: pointer;
+    padding-right: 15px;
+    border-radius: 38px;
+    height: 0px;
+    text-align: right;
+    margin: -8px;
+}
+
+.tileDivTest:active {
+    position: absolute;
+    top: 420px;
+    left: 100px;
+    width: 1000px;
+    z-index: 310;
+    background-color: #FFF;
+}
+
+.tileDivTest {
+    position: absolute;
+    top: 100px;
+    transition: .5s;
+    width: 190px;
+    z-index: 300;
+    background-color: #EAEAEA;
+    float: left;
+}
+
+//THE MENU
+.directive_menu {
+    height: 50px;
+    width: 23%;
+    overflow: hidden;
+    background-color: blueviolet;
+    //float: left;
+    margin: 1%;
+}
+
+.hideTile {
+    height: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transition: .5s;
+}
+
+span.glyphicon.glyphicon-remove-circle {
+    position: absolute;
+    top: -74px;
+    right: 96px;
+    color: #EAC997;
+}
+
+span.glyphicon.glyphicon-remove-circle::after {
+    content: "Close";
+    font-size: 14px;
+    letter-spacing: 0px;
+    word-spacing: -6px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 200;
+    padding: 4px;
+    margin-left: 5px;
+    top: -3px;
+    position: relative;
+}
+
+//................................................................
+//.
+//. BOOTSTRAP MODIFICATIONS
+//................................................................
+.navbar-default {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand {
+    color: #C6B89E;
+}
+
+.navbar-default:hover .navbar-brand:hover,
+.navbar-default:hover .navbar-brand:hover {
+    color: @ultraDark;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: @ultraLight;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: @ultraDark;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: @ultraLight;
+}
+
+.glyphicon {
+    z-index: 300;
+}
+
+.navbar-brand {
+    float: left;
+    /* height: 50px; */
+    
+    color: #EAD4AF;
+    padding: 4px 0px;
+    font-size: 15px;
+    margin-left: 0px;
+    padding-left: 0.6%;
+    letter-spacing: 11px;
+    /* height: 59px; */
+}
+
+.navbar-brand:hover {
+    color: #EAD4AF;
+    cursor: default;
+}
+
+.container>.navbar-header,
+.container-fluid>.navbar-header,
+.container>.navbar-collapse,
+.container-fluid>.navbar-collapse {
+    margin-right: -15px;
+    margin-left: -15px;
+    //border-bottom: 1px solid #9C9FA3;
+    padding-left: 0%;
+    width: 104%;
+}
+
+.container {
+    border-bottom: 1px solid #9C9FA3;
+    margin-bottom: 22px;
+}
+
+.navbar-header {
+    color: #EAD4AF;
+    position: relative;
+    float: left;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+//................................................................
+//.
+//. Music player MODS
+//................................................................
+.widget-player.small .playlist {
+    height: 350px;
+}
+
+//................................................................
+//.
+//. IFRAME MODS
+//................................................................
+#yui3-css-stamp {
+    background-color: transparent;
+}
+
+//................................................................
+//.
+//. KEYWORDS
+//................................................................
+.keywordsDirective {
+    background-color: rgb(80, 87, 95); //rgba(43, 43, 43, 0.56);
+    float: left;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    position: relative;
+    color: rgba(247, 203, 133, 0.61);
+    font-weight: 100;
+    transition: .2s;
+}
+
+.keywordsDirective:hover {
+    background-color: rgba(128, 128, 128, 0.5);
+    color: rgb(209, 192, 162);
+}
+
+.keywordSelected {
+    background-color: rgb(202, 183, 159) !important;
+    color: #5A6B71 !important;
+}
+
+.inactiveKeywordsDirective {
+    cursor: auto !important;
+    font-weight: 300 !important;
+    zoom: 70%;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    background-color: transparent;
+}
+
+.inactiveKeywordsDirective:hover {
+    background-color: transparent !important; //background-color: rgb(78, 90, 106) !important;
+    color: rgba(230, 210, 178, 0.61) !important;
+}
+
+#KeywordsDiv {
+    transition: .4s;
+    padding-left: 1.6%;
+    float: right;
+    height: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.KeywordsDiv {
+    height: 0% !important;
+    max-height: 0px !important;
+    //overflow: hidden;
+}
+
+//................................................................
+//.
+//. MEDIA QUERIES SPECIFIC (BOOTSTRAP BASED)
+//................................................................
+//Miinimum SIZE
+@media (max-width: 767px) {
+    //mindre en 768 px width
+    .app {
+        font-size: 1.5em;
+    }
+    .directive {
+        width: 48.7%;
+    }
+    .content {
+        background-color: @ultraLight;
+        padding: 0px;
+    }
+    .tableDiv {
+        padding: @contentPaddingM10;
+        //padding-right: contentPaddingM10;
+        background-color: @ultraLight;
+        overflow: hidden;
+        width: 50%;
+    }
+    .container>.navbar-header,
+    .container-fluid>.navbar-header,
+    .container>.navbar-collapse,
+    .container-fluid>.navbar-collapse {
+        border-bottom: none;
+    }
+    .container {
+        border-bottom: none;
+        margin-bottom: 0px;
+    }
+    .contactColumn {
+        width: 33%;
+    }
+    .footerDiv {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 467px) {
+    .directive {
+        width: 98%;
+    }
+    span.glyphicon.glyphicon-remove-circle {
+        position: absolute;
+        top: -74px;
+        right: 16px;
+        color: #EAC997;
+    }
+}
+
+//Medium SIZE
+@media (min-width: 992px) {
+    .container {
+        width: 100%;
+    }
+}
+
+//Max SIZE
+@media (min-width: 1200px) {
+    .container {
+        width: 100%;
+    }
+}
+
+.keywordsInTiles {
+    clear: left;
+}
+
+.keywordsInTiles:hover {
+    clear: left;
+    //background: n
+    background: none;
+}
+
+.footerVisibel {
+    height: 210px;
+}
+
+.footerVisibel:after {
+    content: "Click again to close footer...";
+    height: 210px;
+}

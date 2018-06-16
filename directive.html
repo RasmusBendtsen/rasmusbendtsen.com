@@ -1,0 +1,36 @@
+<div id="tile{{index}}" ng-class="{tileExpanded: tileOpenBool, directive: true, hideTile: !shouldTileBeVisibel(index)}">
+    <div class="closeTile" ng-click="CloseTile(index)" ng-show="tileOpenBool"><span class="glyphicon glyphicon-remove-circle"></span>
+    </div>
+    <div class=" TileDescriptionOverlayContainer " id="TileDescriptionOverlayContainer{{index}} " data-ng-click="openTile(index) ">
+        <div class="TileDescriptionOverlay ">
+            <div class="tileDescriptionTitle">
+                <h1>{{menuItemsLocal[index].title}}</h1>
+            </div>
+            <div class="tileDescriptionTeaser">
+                <div class="keywordsInTiles">
+                    <inactive-keyword ng-repeat="keyword in menuItemsLocal[index].itemKeywords" keywords-local="menuItemsLocal[index].itemKeywords" index={{$index}} id={{$index}}></inactive-keyword>
+                </div>
+                <div style="clear:left;">
+                    {{menuItemsLocal[index].teaser}}
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="tileHeaderImageContainer{{index}}" class="tileHeaderImageContainer">
+        <img src="{{menuItemsLocal[index].imgUrl}}" class="tileHeaderImage" id="tileHeaderImage{{index}}">
+
+
+    </div>
+
+    <div id="mainContent{{index}}" class="mainContent" ng-show="tileOpenBool">
+
+        <h1>{{menuItemsLocal[index].title}}</h1>
+        <h2>{{menuItemsLocal[index].teaser}}</h2>
+        <ng-include src="menuItemsLocal[index].htmlInjection"></ng-include>
+        </br>
+        </br>
+    </div>
+
+
+</div>
