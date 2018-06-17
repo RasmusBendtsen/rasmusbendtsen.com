@@ -96,7 +96,16 @@ todoApp.controller('mainController', ['$scope', '$firebaseArray', '$firebaseAuth
             imgUrl: "/images/rasmusbendtsen.com.png",
             itemKeywords: ["UX/ID", "Frontend/Web"],
             imagePos: "0px"
-        }];
+        },
+        {
+            htmlInjection: "/tiles/WebsiteGraphicDesign.html",
+            title: "Intranet design",
+            teaser: "Graphical deesigns for corporate intranet",
+            imgUrl: "/images/Coming_Soon_Placeholder.png",
+            itemKeywords: ["UX/ID", "Frontend/Web"],
+            imagePos: "258px"
+        }
+    ];
 
     $scope.keywords = ["Music", "UX/ID", "Audio Design", "Photography", "Computer Games", "Frontend/Web"];
 
