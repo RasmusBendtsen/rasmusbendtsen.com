@@ -27,7 +27,7 @@ todoApp.controller('mainController', ['$scope', '$firebaseArray', '$firebaseAuth
             title: "DjStation",
             teaser: "Tangible Table Interface: DJStation is an interactive and audiovisual installation based on a tangible user interface with fiducial tracking.",
             imgUrl: "/images/DjStationTable01.png",
-            itemKeywords: ["UX/ID"],
+            itemKeywords: ["Audio Design", "Music", "UX/ID"],
             imagePos: "258px"
         },
         {
@@ -60,7 +60,7 @@ todoApp.controller('mainController', ['$scope', '$firebaseArray', '$firebaseAuth
             title: "Playstation DJ Controller",
             teaser: "What would djing be like with if you used a hacked Playstation Controller",
             imgUrl: "/images/DjStationPS3.png",
-            itemKeywords: ["UX/ID"],
+            itemKeywords: ["Audio Design", "Music", "UX/ID"],
             imagePos: "258px"
         },
 
