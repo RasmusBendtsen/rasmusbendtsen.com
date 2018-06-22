@@ -93,7 +93,7 @@ todoApp.controller('mainController', ['$scope', '$firebaseArray', '$firebaseAuth
             htmlInjection: "/tiles/rasmusbendtsenCom.html",
             title: "rasmusbendtsen.com",
             teaser: "This website",
-            imgUrl: "/images/rasmusbendtsen.com.png",
+            imgUrl: "/images/rasmusbendtsen.com.jpg",
             itemKeywords: ["UX/ID", "Frontend/Web"],
             imagePos: "0px"
         },
