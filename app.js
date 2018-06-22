@@ -98,9 +98,9 @@ todoApp.controller('mainController', ['$scope', '$firebaseArray', '$firebaseAuth
             imagePos: "0px"
         },
         {
-            htmlInjection: "/tiles/WebsiteGraphicDesign.html",
-            title: "Intranet design",
-            teaser: "Graphical deesigns for corporate intranet",
+            htmlInjection: "/tiles/IntranetDesign.html",
+            title: "Intranet designs",
+            teaser: "Graphical designs for corporate intranet",
             imgUrl: "/images/Coming_Soon_Placeholder.png",
             itemKeywords: ["UX/ID", "Frontend/Web"],
             imagePos: "258px"
