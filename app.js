@@ -18,7 +18,7 @@ todoApp.controller('mainController', ['$scope', '$firebaseArray', '$firebaseAuth
             htmlInjection: "/tiles/CloudTodo.html",
             title: "Cloud Synced Todo App",
             teaser: "Simple todo application, responsive and instantly syncing across desktop and mobile devices.",
-            imgUrl: "/images/CloudTodo.png",
+            imgUrl: "/images/CloudTodo.jpg",
             itemKeywords: ["UX/ID", "Frontend/Web"],
             imagePos: "0px"
         },
