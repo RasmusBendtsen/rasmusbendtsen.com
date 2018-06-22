@@ -41,7 +41,7 @@ todoApp.controller('mainController', ['$scope', '$firebaseArray', '$firebaseAuth
         {
             htmlInjection: "/tiles/photosandgraphics.html",
             title: "Photography",
-            teaser: "Various photos taken by me...",
+            teaser: "Various photos from around the world...",
             imgUrl: "//c1.staticflickr.com/9/8463/8428503554_0361fc9e51_n.jpg",
             itemKeywords: ["Photography"],
             imagePos: "258px"
@@ -49,7 +49,7 @@ todoApp.controller('mainController', ['$scope', '$firebaseArray', '$firebaseAuth
         {
             htmlInjection: "/tiles/music.html",
             title: "Music",
-            teaser: "Composed and produced by me...",
+            teaser: "Bedroom productions, new and old compositions",
             imgUrl: "/images/DerRabeLive.png",
             itemKeywords: ["Music"],
             imagePos: "200px"
@@ -92,7 +92,7 @@ todoApp.controller('mainController', ['$scope', '$firebaseArray', '$firebaseAuth
         {
             htmlInjection: "/tiles/rasmusbendtsenCom.html",
             title: "rasmusbendtsen.com",
-            teaser: "I made the webpage you are looking at right now.",
+            teaser: "This website",
             imgUrl: "/images/rasmusbendtsen.com.png",
             itemKeywords: ["UX/ID", "Frontend/Web"],
             imagePos: "0px"
